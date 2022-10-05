@@ -1,64 +1,39 @@
 /*
 
-2) Que dado dois vetores de 10 posições, efetue operações basicas aritmeticas, 
-indicadas por um terceiro vetor cujos dados tambem são fornecidos 
-pelo usuario, gerando e imprimindo um quarto vetor.
+3) Que  entre com dados num vetor VET do tipo inteiro com 20 oisiçoes, onde podem existir varios elementos repetidos. Gere um vetor VET1 que tambem será ordenado e terá somente os elementos do vetor VET que não sao repetidos.
 
 */
 
+#
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#define TAM 4
 
 int main(){
 	
-	int vet1[10],vet2[10];
-	int vet3[10];
-	char op[10][1];
-		
+	int vet[TAM];
+	int aux;
 	
-	for(int i=0; i<10; i++){
+	for(int i=1; i<TAM; i++){
 		
-		for(int j=0; j<10; j++){
-		
-		printf("\ndigite o valor 1: ");
-		scanf("%d",&vet1[i]);
-		printf("digite o valor 2: ");
-		scanf("%d",&vet2[i]);
-		
-		printf("digite a operacao: ");
-		scanf("%s",&op[i][j]);
-		
-		if(op[i][j]=='+'){
-			vet3[i]=(vet1[i]+vet2[i]);
-			printf("\n resultado: %d\n",vet3[i]);
-		}
-		
-		else if(op[i][j]=='-'){
-			vet3[i]=(vet1[i]-vet2[i]);
-			printf("\n resultado: %d\n",vet3[i]);
-		}
-		
-		else if(op[i][j]=='*'){
-			vet3[i]=(vet1[i]*vet2[i]);
-			printf("\n resultado: %d\n",vet3[i]);
-		}
-		
-		else if(op[i][j]=='/'){
-			vet3[i]=(vet1[i]/vet2[i]);
-			printf("\n resultado: %d\n",vet3[i]);
-		}
-		
-		else if(op[i][j]=='%'){
-			vet3[i]=(vet1[i]%vet2[i]);
-			printf("\n resultado: %d\n",vet3[i]);
-			}
-		
-		}
-		
-	
+		printf("INSIRA O VALOR DO VETOR[%d] = ",i);		
+		scanf("%d",&vet[i]);
 	}
-	
-	
+			
+		for(int i=1; i<TAM; i++){
+		  for(int j=i ;j<TAM;j++){
+		
+			if(vet[i]<vet[j]){
+				aux=vet[i];
+				vet[i]=vet[j];
+				vet[j]=aux;
+        
+			}
+		}
+	}
+  for(int i=1; i<TAM; i++){
+			printf("vetor[%d] = %d\n",i,vet[i]);
+			
+			}
 	
 }

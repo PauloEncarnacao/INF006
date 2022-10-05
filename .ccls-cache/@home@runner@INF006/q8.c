@@ -4,6 +4,7 @@ P.S. Matriz triangular superior é uma matriz onde todos elementos de posições
 #define TAM 5 
 
 void main() {
+  
   /*int matriz[5][5] = {{3,2,5,7,8},
                     {0,6,2,9,5},
                     {0,0,1,0,4},
@@ -13,6 +14,7 @@ void main() {
   */
 
   int matriz[TAM][TAM];
+  
 
   for(int l = 0; l <TAM; l++) {
         for(int c = 0; c <TAM; c++) {
