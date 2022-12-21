@@ -1,4 +1,4 @@
-#include <stdio.h>
+  #include <stdio.h>
 #include <stdlib.h>
 
 int soma_vetor(int vet[],int tam);
